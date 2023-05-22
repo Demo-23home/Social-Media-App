@@ -37,7 +37,7 @@ class PostListView(ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']   #>>'date_posted'>>oldest to newest , add '-' to reverse
-
+    paginate_by = 5
 
 class PostDetailView(DetailView):
     model = Post
